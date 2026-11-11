@@ -11,7 +11,7 @@ export const CategoryService = {
     },
 
     async findOne(id: string): Promise<CategoryDTO> {
-        const result = await api.get<CategoryDTO[]>('${ENDPOINT}/${id}');
+        const result = await api.get<CategoryDTO>(`${ENDPOINT}/${id}`);
         return result.data
     }
 }
